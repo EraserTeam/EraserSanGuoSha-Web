@@ -13,7 +13,11 @@
     "eui.VScrollBar": "resource/eui_skins/VScrollBarSkin.exml",
     "eui.VSlider": "resource/eui_skins/VSliderSkin.exml",
     "eui.ItemRenderer": "resource/eui_skins/ItemRendererSkin.exml",
-    "OthersEquip": "resource/eui_skins/OthersEquipSkin.exml"
+    "OthersEquip": "resource/eui_skins/OthersEquipSkin.exml",
+    "SceneLobby": "resource/eui_skins/SceneLobbySkin.exml",
+    "RoomListItemRenderer": "resource/eui_skins/RoomListItemRendererSkin.exml",
+    "SceneWaitingRoom": "resource/eui_skins/SceneWaitingRoomSkin.exml",
+    "SceneRoom": "resource/eui_skins/SceneRoomSkin.exml"
   },
   "autoGenerateExmlsList": true,
   "exmls": [
@@ -102,6 +106,10 @@
       "content": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<e:Skin class=\"skins.RadioButtonSkin\" states=\"up,down,disabled,upAndSelected,downAndSelected,disabledAndSelected\" xmlns:e=\"http://ns.egret.com/eui\">\r\n    <e:Group width=\"100%\" height=\"100%\">\r\n        <e:layout>\r\n            <e:HorizontalLayout verticalAlign=\"middle\"/>\r\n        </e:layout>\r\n        <e:Image fillMode=\"scale\" alpha=\"1\" alpha.disabled=\"0.5\" alpha.down=\"0.7\"\r\n                 source=\"radiobutton_unselect_png\"\r\n                 source.upAndSelected=\"radiobutton_select_up_png\"\r\n                 source.downAndSelected=\"radiobutton_select_down_png\"\r\n                 source.disabledAndSelected=\"radiobutton_select_disabled_png\"/>\r\n        <e:Label id=\"labelDisplay\" size=\"20\" textColor=\"0x707070\"\r\n                 textAlign=\"center\" verticalAlign=\"middle\"\r\n                 fontFamily=\"Tahoma\"/>\r\n    </e:Group>\r\n</e:Skin>\r\n"
     },
     {
+      "path": "resource/eui_skins/RoomListItemRendererSkin.exml",
+      "content": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<e:Skin class=\"RoomListItemRendererSkin\" states=\"up,down,disabled\" xmlns:e=\"http://ns.egret.com/eui\" xmlns:w=\"http://ns.egret.com/wing\"\n        height=\"50\" width=\"200\">\n\t<e:Image width=\"100%\" height=\"100%\" scale9Grid=\"1,3,8,8\" alpha.disabled=\"0.5\" source=\"button_up_png\"\n\t         source.down=\"button_down_png\" />\n\t<e:Label id=\"labelDisplay\" top=\"8\" bottom=\"8\" left=\"8\" right=\"8\" size=\"20\" fontFamily=\"Tahoma\" textColor=\"0xFFFFFF\"\n\t         verticalAlign=\"middle\" textAlign=\"center\"\n\t         text=\"{data.roomID+'   ('+data.playerCount+'/'+data.maxPlayerCount+')'}\" />\n</e:Skin>"
+    },
+    {
       "path": "resource/eui_skins/SelfHPAreaSkin.exml",
       "content": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<e:Skin class=\"SelfHPAreaSkin\" width=\"24\" height=\"94\" xmlns:e=\"http://ns.egret.com/eui\" xmlns:w=\"http://ns.egret.com/wing\" >\r\n\t<e:Image width=\"100%\" height=\"100%\" x=\"0\" y=\"0\" fillMode=\"scale\" source=\"SelfHPBG_png\" locked=\"true\"/>\r\n\t<e:Group id=\"group_HP\" width=\"100%\" height=\"100%\" x=\"0\" y=\"0\" locked=\"true\">\r\n\t\t<e:Image width=\"16\" height=\"17\" x=\"4\" source=\"GreenHPBig\" fillMode=\"scale\" bottom=\"3\" scaleX=\"1\" scaleY=\"1\"/>\r\n\t\t<e:Image width=\"16\" height=\"17\" x=\"4\" source=\"GreenHPBig\" fillMode=\"scale\" bottom=\"20\" scaleX=\"1\" scaleY=\"1\"/>\r\n\t\t<e:Image width=\"16\" height=\"17\" x=\"4\" source=\"GreenHPBig\" fillMode=\"scale\" bottom=\"37\" scaleX=\"1\" scaleY=\"1\"/>\r\n\t\t<e:Image width=\"16\" height=\"17\" x=\"4\" source=\"GreenHPBig\" fillMode=\"scale\" bottom=\"54\" scaleX=\"1\" scaleY=\"1\"/>\r\n\t\t<e:Image width=\"16\" height=\"17\" x=\"4\" source=\"GreenHPBig\" fillMode=\"scale\" bottom=\"71\" scaleX=\"1\" scaleY=\"1\"/>\r\n\t</e:Group>\r\n</e:Skin>"
     },
@@ -120,6 +128,14 @@
     {
       "path": "resource/eui_skins/SceneGameSkin.exml",
       "content": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<e:Skin class=\"SceneGameSkin\" width=\"1136\" height=\"610\" xmlns:e=\"http://ns.egret.com/eui\" xmlns:w=\"http://ns.egret.com/wing\" xmlns:ns1=\"*\">\r\n\t<e:Image id=\"img_bg\" width=\"100%\" height=\"100%\" x=\"0\" y=\"0\" fillMode=\"scale\" source=\"Background1_png\"/>\r\n\t<ns1:SelfGameArea id=\"selfGameArea\" width=\"1136\" height=\"118\" x=\"0\" bottom=\"0\" skinName=\"SelfGameAreaSkin\"/>\r\n\t<ns1:GameSidebarArea width=\"194\" height=\"491\" top=\"0\" right=\"0\" skinName=\"GameSidebarAreaSkin\"/>\r\n\t<ns1:OthersGameArea id=\"othersGameArea\" width=\"942\" height=\"492\" anchorOffsetX=\"0\" anchorOffsetY=\"0\" left=\"0\" top=\"0\"/>\r\n\t<ns1:OperationArea id=\"operationArea\" width=\"942\" height=\"36\" anchorOffsetX=\"0\" anchorOffsetY=\"0\" x=\"0\" skinName=\"OperationAreaSkin\" y=\"470\"/>\r\n\t<e:Label id=\"lb_tip\" text=\"\" x=\"0\" y=\"426\" size=\"40\" anchorOffsetX=\"0\" width=\"1884\" anchorOffsetY=\"0\" height=\"40\" verticalAlign=\"middle\" textAlign=\"center\" strokeColor=\"0x07324e\" stroke=\"0\" textColor=\"0xffffff\" fontFamily=\"Microsoft YaHei\" bold=\"true\" scaleX=\"0.5\" scaleY=\"0.5\"/>\r\n\t<e:Group id=\"group_movingCards\" width=\"100%\" height=\"100%\" x=\"0\" y=\"0\" touchThrough=\"true\" touchEnabled=\"false\">\r\n\t</e:Group>\r\n\t<e:Group id=\"group_top\" width=\"100%\" height=\"100%\" x=\"0\" y=\"0\" touchThrough=\"true\" touchEnabled=\"false\">\r\n\t</e:Group>\r\n</e:Skin>"
+    },
+    {
+      "path": "resource/eui_skins/SceneLobbySkin.exml",
+      "content": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<e:Skin class=\"SceneLobbySkin\" width=\"1136\" height=\"610\" xmlns:e=\"http://ns.egret.com/eui\" xmlns:w=\"http://ns.egret.com/wing\" >\n\t<e:List id=\"list_roomList\" width=\"320\" height=\"360\" anchorOffsetX=\"0\" anchorOffsetY=\"0\" itemRendererSkinName=\"RoomListItemRendererSkin\" y=\"20\" x=\"408\">\n\t</e:List>\n\t<e:Button id=\"btn_createRoom\" label=\"创建房间\" anchorOffsetX=\"0\" width=\"320\" anchorOffsetY=\"0\" height=\"70\" y=\"530\" x=\"408\"/>\n\t<e:Button id=\"btn_joinRoom\" label=\"加入房间\" anchorOffsetX=\"0\" width=\"320\" anchorOffsetY=\"0\" height=\"70\" y=\"460\" x=\"408\"/>\n\t<e:Button id=\"btn_refreshRoomList\" label=\"刷新列表\" anchorOffsetX=\"0\" width=\"320\" anchorOffsetY=\"0\" height=\"70\" y=\"390\" x=\"408\"/>\n</e:Skin>"
+    },
+    {
+      "path": "resource/eui_skins/SceneRoomSkin.exml",
+      "content": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<e:Skin class=\"SceneRoomSkin\" width=\"1136\" height=\"610\" xmlns:e=\"http://ns.egret.com/eui\"\n        xmlns:w=\"http://ns.egret.com/wing\">\n\t<e:Label id=\"lb_roomInfo\" text=\"0   (1/2)\" y=\"270\" anchorOffsetX=\"0\" width=\"274\" anchorOffsetY=\"0\" height=\"36\" horizontalCenter=\"0\"  textAlign=\"center\"/>\n\t<e:Button id=\"btn_leaveRoom\" label=\"离开房间\" y=\"340\" anchorOffsetX=\"0\" width=\"220\"  horizontalCenter=\"0.5\"/>\n</e:Skin>"
     },
     {
       "path": "resource/eui_skins/SelfEquipSkin.exml",
